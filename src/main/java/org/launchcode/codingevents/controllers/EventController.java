@@ -20,8 +20,12 @@ public class EventController {
         events.add("Shakespeare in the Park");
         events.add("Turkey Trot");
         model.addAttribute("events", events);
-
         return "events/index";
     }
 
+    @GetMapping("create")
+    public String renderCreateEventForm() {
+        return "create";
+        //note: previous line, Chris had path = events/create and I got an error??
+    }
 }
