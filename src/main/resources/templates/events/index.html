@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<nav th:replace="fragments :: navigation"></nav>
 <p th:unless="${events} and ${events.size()}">No Events!</p>
 <ol>
     <li th:each="event : ${events}" th:text="${event}"></li>

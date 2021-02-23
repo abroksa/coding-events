@@ -5,8 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-
-<nav th:replace="fragments :: navigation"></nav>
-
+<nav th:fragment="navigation">
+    <ul>
+        <li><a href="events">All Events</a></li>
+    </ul>
+</nav>
 </body>
 </html>

@@ -18,20 +18,15 @@ public class EventController {
 
     @GetMapping
     public String displayAllEvents(Model model) {
-//        List<String> events = new ArrayList<>();
-//        events.add("Taste of St Louis");
-//        events.add("Lou Fest");
-//        events.add("Shakespeare in the Park");
-//        events.add("Turkey Trot");
-
         model.addAttribute("events", events);
         return "events/index";
     }
 
     @GetMapping("create")
     public String renderCreateEventForm() {
-        return "create";
+        return "events/create";
         //note: previous line, Chris had path = events/create and I got an error??
+        //moved create to events folder and changed path to events/create
     }
 
     @PostMapping("create")
